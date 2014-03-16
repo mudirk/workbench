@@ -1,0 +1,12 @@
+@startuml
+
+package de.homelabs.webapps.workbench.plugin {
+
+interface IWorkbenchPlugin{
+	String getPluginVersion()
+	String getPluginInfo()
+	IMenuItem getMainMenuItem()
+}
+
+}
+@enduml

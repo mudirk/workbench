@@ -1,0 +1,38 @@
+@startuml
+
+package de.homelabs.webapps.workbench.menu { 
+
+interface IMenuItem {
+	String getLink()
+	String getText()
+	String getTitle()
+}
+
+interface IMenu {
+	MenuItem getItems()
+	boolean addItem()
+	boolean addItems(List MenuItem)
+}
+
+interface IMenuManager {
+	IMenu getMenu(MenuType menuType)
+	boolean addMenu(MenuType menuType, IMenu menu)
+}
+
+enum MenuType {
+	MAINMENU
+	SUBMENU
+}
+
+Class MainMenu
+Class MainMenuItem
+}
+
+IMenu *-- IMenuItem
+
+MainMenu --|> IMenu
+MainMenuItem --|> IMenuItem
+
+IMenuManager -- MenuType
+IMenuManager --o IMenu 
+@enduml
