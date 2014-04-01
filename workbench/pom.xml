@@ -47,6 +47,11 @@
 			<artifactId>workbench-api</artifactId>
 			<version>0.0.1</version>
 		</dependency>
+		<dependency>
+			<groupId>de.homelabs.webapps.workbench</groupId>
+			<artifactId>workbench-usermanagement</artifactId>
+			<version>0.1</version>
+		</dependency>
 	</dependencies>
 
 	<build>

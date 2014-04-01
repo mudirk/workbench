@@ -8,23 +8,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class HelloWorldController {
+public class MainController {
 
 	Logger logger = LoggerFactory.getLogger(getClass());
-	
-	public HelloWorldController() {
-		System.out.println("Hello World Controller");
+
+	public MainController() {
+		System.out.println("MainController");
 	}
-	
+
 	@RequestMapping({ "/*", "/" })
-	public String hello(
+	public String mainHandler(
 			@RequestParam(value = "name", required = false, defaultValue = "World") String name,
 			Model model) {
-		
+
 		model.addAttribute("name", name);
+		model.addAttribute("title","Workbench");
 		
-		logger.debug("HelloWorld Controller");
-		return "user";
+		model.addAttribute("contentTemplate", "/de/homelabs/webapps/workbench/templates/home.ftl");
+		return "de/homelabs/webapps/workbench/templates/main";
 	}
 
 }

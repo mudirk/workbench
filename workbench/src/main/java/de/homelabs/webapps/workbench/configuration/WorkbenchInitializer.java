@@ -17,7 +17,9 @@ public class WorkbenchInitializer implements WebApplicationInitializer {
 		ctx.register(WorkbenchConfiguration.class);
 
 		ctx.setServletContext(servletContext);
-
+		
+		//Plugins have to start in this package
+		ctx.scan("de.homelabs.webapps.workbench");
 		Dynamic servlet = servletContext.addServlet("workbench",
 				new DispatcherServlet(ctx));
 		servlet.addMapping("/");

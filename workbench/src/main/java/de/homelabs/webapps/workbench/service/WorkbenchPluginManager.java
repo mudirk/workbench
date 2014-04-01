@@ -1,37 +1,56 @@
 package de.homelabs.webapps.workbench.service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.annotation.PostConstruct;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.stereotype.Service;
 
+import de.homelabs.webapps.workbench.menu.IMenu;
+import de.homelabs.webapps.workbench.menu.MainMenu;
+import de.homelabs.webapps.workbench.menu.MainMenuItem;
 import de.homelabs.webapps.workbench.plugin.IWorkbenchPlugin;
 
 @Service
 public class WorkbenchPluginManager {
 
-	List<IWorkbenchPlugin> plugins = new ArrayList<IWorkbenchPlugin>();
+	private final Logger logger = LoggerFactory.getLogger(getClass());
 	
-	@Autowired
-	ApplicationContext context;
+	private Map<String, IWorkbenchPlugin> plugins = new HashMap<String, IWorkbenchPlugin>();
+	
+	@Autowired private ApplicationContext context;
+	
+	private IMenu mainMenu = new MainMenu();
 	
 	public WorkbenchPluginManager() {
 		System.out.println("Init");
+		//add some static content
+		mainMenu.addItem(new MainMenuItem("index.html", "Home", "Home"));
 	}
 	
 	@PostConstruct
 	protected void registerPlugins(){
-		Map<String, IWorkbenchPlugin> plugins = context.getBeansOfType(IWorkbenchPlugin.class);
+		plugins = context.getBeansOfType(IWorkbenchPlugin.class);
+		
+		//add user management
+		//TODO: convert to plugin
+		//mainMenu.addItem(new MainMenuItem("user.html","Benutzerverwaltung", "Benutzerverwaltung"));
+		
+		//add plugin main menu links
 		for (String key : plugins.keySet()){
 			IWorkbenchPlugin plugin = plugins.get(key);
-			System.out.println("Info: "+plugin.getPluginInfo());
-			System.out.println("Version: "+plugin.getPluginVersion());
+			logger.debug("Info: "+plugin.getPluginInfo());
+			logger.debug("Version: "+plugin.getPluginVersion());
+			mainMenu.addItem(plugin.getMainMenuItem());
 		}
+	}
+	
+	public IMenu getMainMenu(){
+		return mainMenu;
 	}
 }
