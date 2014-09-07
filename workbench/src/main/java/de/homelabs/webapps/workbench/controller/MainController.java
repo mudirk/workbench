@@ -23,7 +23,7 @@ public class MainController {
 
 		model.addAttribute("name", name);
 		model.addAttribute("title","Workbench");
-		
+		model.addAttribute("moduleTitle", "Home");
 		model.addAttribute("contentTemplate", "/de/homelabs/webapps/workbench/templates/home.ftl");
 		return "de/homelabs/webapps/workbench/templates/main";
 	}

@@ -1,24 +1,35 @@
-			<h2>Benutzerverwaltung | &Uuml;bersicht</h2>
-			<p>The fact that you are seeing this page indicates that the website you just visited is either experiencing problems or is undergoing routine maintenance.</p>
-			<p>If you would like to let the administrators of this website know that you've seen this page instead of the page you expected, you should send them e-mail. In general, mail sent to the name "webmaster" and directed to the website's domain should reach the appropriate person.</p>
-			<p>The fact that you are seeing this page indicates that the website you just visited is either experiencing problems or is undergoing routine maintenance.</p>
+			<div id="subdiv">
+	<ul id="submenu">
+		<li style="background-image: url(img/list-2x.png);background-repeat: no-repeat;"><a href="#">auflisten</a></li>
+		<li style="background-image: url(img/circle-check-2x.png);background-repeat: no-repeat;"><a href="#">anlegen</a></li>								
+	</ul>
+</div>
+			<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br />
+				<br />
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet <a href="#">clita kasd gubergren</a>, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br />
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.<br />
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. <br /><br />
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et <a href="#">dolore</a> magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br />
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.<br />
+				<br />
+				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
+			</p>
 			<table>
 				<tr>
-					<th>Id</th>
+					<th>&nbsp;</th>
+					<th>ID</th>
 					<th>Name</th>
 					<th>Status</th>
 					<th>Login</th>
 				</tr>
-				<tr class="td_even">
-					<td>1</td>
-					<td>Dirk M&uuml;ller</td>
-					<td>aktiv</td>
-					<td>dmueller</td>
+				<#assign index=0>
+				<#list users as user>
+				<tr class="<#if index==0>tr_even<#assign index=1><#else>tr_odd<#assign index=0></#if>">
+					<td><a href="#" title="bearbeiten"><img src="img/pencil-2x.png" /></a>&nbsp;&nbsp;<a href="#" title="l&ouml;schen"><img src="img/trash-2x.png" /></a></td>
+					<td class="td_id">${user.id}</td>
+					<td>${user.lastname}</td>
+					<td>${user.firstname}</td>
+					<td>pappnase</td>
 				</tr>
-				<tr>
-					<td class="td_odd">2</td>
-					<td class="td_odd">Maximilian Mustermann</td>
-					<td class="td_odd">aktiv</td>
-					<td class="td_odd">mmustermann</td>
-				</tr>
-			</table>
+				</#list>
+			</table>	

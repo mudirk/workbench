@@ -53,7 +53,7 @@
 	<!--footer starts here -->
 	<footer id="footer">
 		<div class="footer_logo">
-			<img src="img/logo_footer.jpg" alt="#">
+			<!--<img src="img/logo_footer.jpg" alt="#">-->
         </div>     
         <p class="copyright"><a href="http://www.homelabs.de/" title="homelabs.de" target="_blank">homelabs</a> | 2014</p> 
      </footer><!--footer end -->  

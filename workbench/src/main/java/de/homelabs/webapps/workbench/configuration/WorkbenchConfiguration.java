@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
@@ -33,7 +34,7 @@ import freemarker.template.TemplateExceptionHandler;
  * 
  */
 @Configuration
-// @ComponentScan(basePackages= {"*/**"})
+@ComponentScan(basePackages = {"de.homelabs"})
 @EnableWebMvc
 public class WorkbenchConfiguration extends WebMvcConfigurerAdapter {
 	Logger logger = LoggerFactory.getLogger(getClass());
