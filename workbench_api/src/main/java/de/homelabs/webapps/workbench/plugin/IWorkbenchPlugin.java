@@ -1,10 +1,12 @@
 package de.homelabs.webapps.workbench.plugin;
 
-import de.homelabs.webapps.workbench.menu.IMenuItem;
+import java.util.Map;
+
+import de.homelabs.webapps.workbench.domain.MetaDataKey;
+import de.homelabs.webapps.workbench.menu.MenuItem;
 
 public interface IWorkbenchPlugin {
 
-	String getPluginVersion();
-	String getPluginInfo();
-	IMenuItem getMainMenuItem();
+	Map<MetaDataKey, Object> getMetaData();
+	MenuItem getMenuItem();
 }

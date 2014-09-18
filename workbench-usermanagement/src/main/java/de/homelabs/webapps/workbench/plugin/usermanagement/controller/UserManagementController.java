@@ -10,10 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import de.homelabs.webapps.workbench.domain.WorkbenchConstants;
-import de.homelabs.webapps.workbench.plugin.usermanagement.menu.UserManagementContextMenu;
 import de.homelabs.webapps.workbench.plugin.usermanagement.service.IUserService;
 import de.homelabs.webapps.workbench.plugin.usermanagement.service.UserManagementPlugin;
+import de.homelabs.webapps.workbench.domain.WorkbenchConstants;
 
 @Controller
 public class UserManagementController { 

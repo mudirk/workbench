@@ -7,7 +7,7 @@ public class MenuItem {
 	private String text;
 	private String title;
 	private String image;
-	private String template = WorkbenchConstants.TEMPLATE_PATH+"submenu.ftl";
+	private String template = WorkbenchConstants.TEMPLATE_PATH+"menutemplate.ftl";
 	
 	/**
 	 * default constructor

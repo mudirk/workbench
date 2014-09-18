@@ -5,22 +5,22 @@ import java.util.List;
 
 public class MainMenu implements IMenu {
 
-	private List<IMenuItem> mainMenuItems = new ArrayList<IMenuItem>();
+	private List<MenuItem> mainMenuItems = new ArrayList<MenuItem>();
 	
 	@Override
-	public List<IMenuItem> getItems() {
+	public List<MenuItem> getItems() {
 		return mainMenuItems;
 	}
 
 	@Override
-	public boolean addItem(IMenuItem menuItem) {
+	public boolean addItem(MenuItem menuItem) {
 		mainMenuItems.add(menuItem);
 		return true;
 	}
 
 	@Override
-	public boolean addItems(List<IMenuItem> menuItems) {
-		for (IMenuItem item : menuItems){
+	public boolean addItems(List<MenuItem> menuItems) {
+		for (MenuItem item : menuItems){
 			mainMenuItems.add(item);
 		}
 		
