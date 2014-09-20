@@ -64,7 +64,11 @@
 			<artifactId>workbench-usermanagement</artifactId>
 			<version>0.1</version>
 		</dependency>
-
+		<dependency>
+			<groupId>de.homelabs.webapps.workbench.plugin.pool</groupId>
+			<artifactId>workbench-pool</artifactId>
+			<version>0.1</version>
+		</dependency>
 		<!-- persistence -->
 		<dependency>
 			<groupId>org.hibernate</groupId>

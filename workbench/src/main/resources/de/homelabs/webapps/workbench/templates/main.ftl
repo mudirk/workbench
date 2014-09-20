@@ -63,11 +63,11 @@
 			#mainmenu a { border-bottom:1px solid black; margin:3px 2px 0px 2px; cursor:pointer; display:block; text-decoration:none;}
 			#mainmenu a:hover{color:#f90;text-decoration:none;}
 			
-			#submenu {font-family:courier;font-size:0.9em; padding: 0px; margin:0px 0px 20px 12px;}
-			#submenu li { display:inline;padding-left:16px;height:16px;}
-			#submenu a { cursor:pointer;  text-decoration:none;padding:5px;}
+			#submenu {font-family:courier;font-size:1em;padding-left:12px;}
+			#submenu li { display:inline;padding-left:20px;padding-bottom:2px;margin:0px 8px 0px 0px;}
+			#submenu a { cursor:pointer;  text-decoration:none;}
 			#submenu a:hover{color:#f90;text-decoration:none;}
-			#subdiv {background-color:#e6e6e6;height:20px;padding:8px 0px 2px 0px;margin:0px 12px 10px 12px;border:1px solid #995c00;}
+			#subdiv {background-color:#e6e6e6;border:1px solid #995c00;margin-left:10px;margin-bottom:15px;}
 			
 			/* table */
 			table {	border-spacing: 1px; border: 1px solid gray; padding: 1px; margin-left: 12px;font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif; font-size:1em;}
@@ -81,7 +81,7 @@
 			
 			/* typo */
 			h1 { font:1.5em georgia,serif; 	margin:0.1em 0;}
-			h2 { font:1.25em georgia,serif; margin:0 0 0.5em;}
+			h2 { font:1.5em georgia,serif; margin:0 0 0.5em;}
 			h1, h2, a {	color:orange;}
 			p { line-height:1.5; margin:0 0 1em;}
 			a {text-decoration: underline;color:#333;font-weight:bold;font-size:1.1em;}
