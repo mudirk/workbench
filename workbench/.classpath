@@ -29,6 +29,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="/home/smirk/programme/apache-tomcat-7.0.55/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/projects/env/apache-tomcat-7.0.47_64bit/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
