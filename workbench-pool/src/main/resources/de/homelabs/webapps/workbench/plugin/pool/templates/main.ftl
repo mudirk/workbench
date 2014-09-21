@@ -1,6 +1,6 @@
 			<div id="subdiv">
 	<ul id="submenu">
-		<li style="background-image: url(img/circle-check-2x.png);background-repeat: no-repeat;"><a href="#">anlegen</a></li>								
+		<li style="background-image: url(img/document-2x.png);background-repeat: no-repeat;"><a href="#">anlegen</a></li>								
 	</ul>
 </div>
 			<p>Der Pool ist ein Ort, an dem Dinge schnell und unkompliziert erfasst werden können. Später besteht die Möglichkeit, Elemente des Pools ind konkrete
@@ -21,8 +21,8 @@
 				<tr class="<#if index==0>tr_even<#assign index=1><#else>tr_odd<#assign index=0></#if>">
 					<td><a href="#" title="bearbeiten"><img src="img/pencil-2x.png" /></a>&nbsp;&nbsp;<a href="#" title="l&ouml;schen"><img src="img/trash-2x.png" /></a></td>
 					<td class="td_id">${poolitem.id}</td>
-					<td>${poolitem.created?datetime}</td>
-					<td>${poolitem.author}</td>
+					<td>${poolitem.entityMetaData.createdAsText}</td>
+					<td>${poolitem.entityMetaData.createdBy}</td>
 					<td>simple</td>
 					<td>${poolitem.name}</td>
 				</tr>

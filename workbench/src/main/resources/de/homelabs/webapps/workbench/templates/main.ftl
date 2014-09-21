@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Test</title>
+		<title>Workbench - organize Work</title>
 		<style>
 			html, body {
 				margin:0; padding:0;height:100%;

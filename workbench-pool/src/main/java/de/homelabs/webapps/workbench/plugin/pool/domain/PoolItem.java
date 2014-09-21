@@ -1,63 +1,36 @@
 package de.homelabs.webapps.workbench.plugin.pool.domain;
 
-import java.util.Date;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+import de.homelabs.webapps.workbench.domain.EntityMetaData;
+
+@Entity
+@Table(name="pool", schema="core")
 public class PoolItem {
 
+	@Embedded
+	private EntityMetaData entityMetaData;
+	
+	@Id
 	int id;
-	Date created;
-	String author;
-	int authorId;
 	String name;
 	
-	public PoolItem(int id, Date created, String author, int authorId, String name) {
+	public PoolItem(){}
+	public PoolItem(EntityMetaData entityMetaData, int id, String name) {
 		super();
+		this.entityMetaData = entityMetaData;
 		this.id = id;
-		this.created = created;
-		this.author = author;
-		this.authorId = authorId;
 		this.name = name;
 	}
 
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public Date getCreated() {
-		return created;
-	}
-
-	public void setCreated(Date created) {
-		this.created = created;
-	}
-
-	public String getAuthor() {
-		return author;
-	}
-
-	public void setAuthor(String author) {
-		this.author = author;
-	}
-
-	public int getAuthorId() {
-		return authorId;
-	}
-
-	public void setAuthorId(int authorId) {
-		this.authorId = authorId;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-	
+	public EntityMetaData getEntityMetaData()						{ return this.entityMetaData;			}
+	public void setEntityMetaData(EntityMetaData entityMetaData)	{ this.entityMetaData = entityMetaData;	}
+	public int getId() 												{ return id;							}
+	public void setId(int id) 										{ this.id = id;							}
+	public String getName() 										{ return name;							}
+	public void setName(String name) 								{ this.name = name;						}
 	
 }
