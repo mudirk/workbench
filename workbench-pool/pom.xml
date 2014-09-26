@@ -1,10 +1,11 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>de.homelabs.webapps.workbench.plugin.pool</groupId>
-  <artifactId>workbench-pool</artifactId>
-  <version>0.1</version>
-  
-  <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.homelabs.webapps.workbench.plugin.pool</groupId>
+	<artifactId>workbench-pool</artifactId>
+	<version>0.1</version>
+
+	<properties>
 
 		<!-- Generic properties -->
 		<java.version>1.6</java.version>
@@ -13,7 +14,7 @@
 
 
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>de.homelabs.webapps.workbench</groupId>
@@ -51,6 +52,11 @@
 			<artifactId>tomcat-servlet-api</artifactId>
 			<version>7.0.55</version>
 		</dependency>
-
-	</dependencies>	
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.20</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
 </project>

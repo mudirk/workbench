@@ -92,6 +92,14 @@
 			#footer p {padding:0.5em;margin:0;}
 			#footer {font-family:courier;}
 		</style>
+		
+		<!-- JQuery -->
+		<script src="js/jquery.min.js" type="text/javascript"></script>
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<script src="js/jquery-ui.min.js" type="text/javascript"></script>
+		<script src="js/jquery.blockUI.js" type="text/javascript"></script>
+		<!--<script src="js/respond.min.js" type="text/javascript"></script>-->
+		
 	</head>
 	
 	<body>

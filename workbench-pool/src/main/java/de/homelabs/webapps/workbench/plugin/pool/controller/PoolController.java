@@ -8,11 +8,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
 
 import de.homelabs.webapps.workbench.domain.WorkbenchConstants;
 import de.homelabs.webapps.workbench.plugin.pool.service.IPoolService;
 import de.homelabs.webapps.workbench.plugin.pool.service.PoolPlugin;
+import freemarker.template.Template;
  
 
 @Controller
@@ -21,6 +24,7 @@ public class PoolController {
 	
 	@Autowired
 	IPoolService poolService;
+	@Autowired FreeMarkerConfigurer configurer;
 	
 	public PoolController() {
 		// logger.info("Usermanagementcontroller created");
@@ -47,5 +51,10 @@ public class PoolController {
 		//model.addAttribute("users", userService.getAllUser());
 		model.addAttribute("poolitems",poolService.getAllPoolItems());
 		return WorkbenchConstants.TEMPLATE_PATH + "main";
+	}
+	
+	@RequestMapping({"/pool/createform.html"})
+	public String getCreateForm(HttpServletRequest request, HttpServletResponse response, Model model){
+		return PoolPlugin.TEMPLATE_PATH + "createPostForm";
 	}
 }
