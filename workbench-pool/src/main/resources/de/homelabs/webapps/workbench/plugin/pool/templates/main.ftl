@@ -72,7 +72,7 @@ $(document).ready(function(){
 				<#assign index=0>
 				<#list poolitems as poolitem>
 				<tr class="<#if index==0>tr_even<#assign index=1><#else>tr_odd<#assign index=0></#if>">
-					<td><a href="#" title="bearbeiten"><img src="img/pencil-2x.png" /></a>&nbsp;&nbsp;<a href="#" title="l&ouml;schen"><img src="img/trash-2x.png" /></a></td>
+					<td><a href="#" title="details"><img src="img/zoom-in-2x.png" /></a>&nbsp;&nbsp;<a href="#" title="bearbeiten"><img src="img/pencil-2x.png" /></a>&nbsp;&nbsp;<a href="#" title="l&ouml;schen"><img src="img/trash-2x.png" /></a></td>
 					<td class="td_id">${poolitem.id}</td>
 					<td>${poolitem.entityMetaData.createdAsText}</td>
 					<td>${poolitem.entityMetaData.createdBy}</td>

@@ -22,9 +22,10 @@ public class WorkbenchInitializer implements WebApplicationInitializer {
 		ctx.scan("de.homelabs.webapps.workbench");
 		Dynamic servlet = servletContext.addServlet("workbench",
 				new DispatcherServlet(ctx));
+		
 		servlet.addMapping("/");
 		servlet.setLoadOnStartup(1);
-
+		
 	}
 
 }

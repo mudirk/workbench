@@ -13,11 +13,9 @@
 	<form method="post">
 		
 		
-		<input type="text" name="items['0']" />
-		
-		
-		
-		<input type="text" name="items['1']" />
+		Wert 1: <input type="text" name="items['0']" />
+				
+		Wert 2: <input type="text" name="items['1']" />
 
 		
 		<input type="submit" value="abschicken" />

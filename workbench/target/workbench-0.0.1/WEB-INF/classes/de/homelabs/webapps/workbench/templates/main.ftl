@@ -95,8 +95,8 @@
 		
 		<!-- JQuery -->
 		<script src="js/jquery.min.js" type="text/javascript"></script>
-		<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
-		<script src="js/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+		<script src="js/jquery-ui.min.js" type="text/javascript"></script>
 		<script src="js/jquery.blockUI.js" type="text/javascript"></script>
 		<!--<script src="js/respond.min.js" type="text/javascript"></script>-->
 		

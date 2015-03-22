@@ -40,6 +40,7 @@
 			<groupId>org.freemarker</groupId>
 			<artifactId>freemarker</artifactId>
 			<version>2.3.20</version>
+			<scope>compile</scope>
 		</dependency>
 
 		<!-- Logging -->
@@ -64,7 +65,11 @@
 			<artifactId>workbench-usermanagement</artifactId>
 			<version>0.1</version>
 		</dependency>
-
+		<dependency>
+			<groupId>de.homelabs.webapps.workbench.plugin.pool</groupId>
+			<artifactId>workbench-pool</artifactId>
+			<version>0.1</version>
+		</dependency>
 		<!-- persistence -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -76,7 +81,11 @@
 			<artifactId>postgresql</artifactId>
 			<version>9.1-901.jdbc4</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.directwebremoting</groupId>
+			<artifactId>dwr</artifactId>
+			<version>3.0.M1</version>
+		</dependency>
 	</dependencies>
 
 	<build>

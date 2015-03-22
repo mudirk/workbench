@@ -79,6 +79,7 @@ public class WorkbenchConfiguration extends WebMvcConfigurerAdapter {
 		viewResolver.setPrefix("");
 		viewResolver.setSuffix(".ftl");
 		viewResolver.setContentType("text/html;charset=UTF-8");
+		viewResolver.setRequestContextAttribute("requestContext");
 
 		return viewResolver;
 	}

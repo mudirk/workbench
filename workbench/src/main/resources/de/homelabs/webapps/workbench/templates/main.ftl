@@ -92,7 +92,7 @@
 			#footer p {padding:0.5em;margin:0;}
 			#footer {font-family:courier;}
 		</style>
-		
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.css"> 
 		<!-- JQuery -->
 		<script src="js/jquery.min.js" type="text/javascript"></script>
 		<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>

@@ -41,7 +41,7 @@ public class TestPluginController {
 		String message = "Daten wurden gespeichert";
 		
 		if (result.hasErrors()){
-			message = "Bitte geben Sie eine gueltige Leistung ein!";
+			message = "Bitte geben Sie eine gueltige Ganzzahl ein!";
 		}
 		model.addAttribute("title", "Workbench");
 		model.addAttribute("moduleTitle", "TestPlugin");
